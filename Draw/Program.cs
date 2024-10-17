@@ -165,6 +165,30 @@ class Program
         int menuHeight = 5;
         int menuX = (Console.WindowWidth - menuWidth) / 2;
         int menuY = (Console.WindowHeight - menuHeight) / 2;
+
+        for (int x = menuX - 1; x <= menuX + menuWidth; x++)
+        {
+            Console.SetCursorPosition(x, menuY - 1);
+            Console.Write("═");
+            Console.SetCursorPosition(x, menuY + menuHeight);
+            Console.Write("═");
+        }
+        for (int y = menuY - 1; y <= menuY + menuHeight; y++)
+        {
+            Console.SetCursorPosition(menuX - 1, y);
+            Console.Write("║");
+            Console.SetCursorPosition(menuX + menuWidth, y);
+            Console.Write("║");
+        }
+        Console.SetCursorPosition(menuX - 1, menuY - 1);
+        Console.Write("╔");
+        Console.SetCursorPosition(menuX + menuWidth, menuY - 1);
+        Console.Write("╗");
+        Console.SetCursorPosition(menuX - 1, menuY + menuHeight);
+        Console.Write("╚");
+        Console.SetCursorPosition(menuX + menuWidth, menuY + menuHeight);
+        Console.Write("╝");
+        
         do
         {
             Console.SetCursorPosition(menuX, menuY);
