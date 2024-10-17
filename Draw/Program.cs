@@ -36,7 +36,11 @@ class Program
         Console.SetCursorPosition(cursorX, cursorY);
         Console.CursorVisible = false;
     }
-
+        static void DisplaySettings()
+    {
+        Console.SetCursorPosition(0, 25);
+        Console.WriteLine("Color: " + currentColor);
+    }
     static void Backspace()
     {
         if (cursorX > 0)
@@ -77,6 +81,7 @@ class Program
     {
         while (true)
         {
+            DisplaySettings();
             DrawScreen();
             ConsoleKeyInfo originalKeyInfo = Console.ReadKey(true);
             ConsoleKey originalKey = originalKeyInfo.Key;
