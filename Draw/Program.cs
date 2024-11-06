@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 public class Drawing
 {
     public int Id { get; set; }
@@ -16,7 +17,7 @@ public class DrawingContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\GergoPc\source\repos\ConsoleDrawing\DrawingDB.mdf;Database=DrawingDB;Trusted_Connection=True;");
+        optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;AttachDbFilename=C:\Users\lambi\source\repos\Drawin\DrawingDB.mdf;Database=DrawingDB;Trusted_Connection=True;");
     }
 
 
